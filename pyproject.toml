@@ -31,6 +31,7 @@ repository = "https://github.com/ahm531/am-nomad-oasis-2026"
 # Add your plugins to the list below.
 plugins = [
   "nomad-north-jupyter>=0.2.6",
+  "nomad-gui==2.0.0a1",
 ]
 jupyter = ["jupyter-events"]
 gpu-action = []
@@ -43,6 +44,14 @@ extra-index-url = [
   "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple",
 ]
 prerelease = "if-necessary-or-explicit"
+
+[tool.uv.sources]
+nomad-gui = { index = "pypi" }
+
+[[tool.uv.index]]
+name = "pypi"
+url = "https://pypi.org/simple"
+explicit = true
 
 [tool.setuptools.packages.find]
 exclude = ["gui*", "docs*", "config*"]

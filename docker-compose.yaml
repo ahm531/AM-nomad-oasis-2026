@@ -257,7 +257,10 @@ services:
   # nomad app (api + proxy)
   app:
     restart: unless-stopped
-    image: ghcr.io/ahm531/am-nomad-oasis-2026:main
+    build:
+      context: .
+      target: final
+    image: am-nomad-oasis-2026:local-gui
     platform: linux/amd64
     container_name: nomad_oasis_app
     environment:
