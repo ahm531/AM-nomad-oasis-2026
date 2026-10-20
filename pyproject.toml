@@ -32,6 +32,7 @@ repository = "https://github.com/ahm531/AM-nomad-oasis-2026"
 plugins = [
   "nomad-north-jupyter>=0.2.6",
   "nomad-gui==2.0.0",
+  "nomad-bayesian-optimization[actions] @ git+https://github.com/FAIRmat-NFDI/nomad-bayesian-optimization.git@project-demo",
 ]
 jupyter = ["jupyter-events"]
 gpu-action = []
